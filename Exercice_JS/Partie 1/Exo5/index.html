@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+        <form>
+            <label for="premier_nombre">Premier nombre : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
+            <label for="deuxieme_nombre">Deuxième nombre : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
+            <button  id="valider" name ="valider" onClick="JSCTRODUR()">Valider</button>
+        </form>
+        <script>
+        function JSCTRODUR(){
+             var premiernombre = document.getElementById('premier_nombre').value;
+             var deuxiemenombre = document.getElementById('deuxieme_nombre').value;
+             if (isNaN (premiernombre) == true || isNaN (deuxiemenombre) == true) {
+               alert("Error");
+             }
+             else {
+              premiernombre = parseInt(premiernombre);
+             deuxiemenombre = parseFloat(deuxiemenombre);
+             var result = premiernombre * deuxiemenombre;
+             alert(result);
+           }
+         }
+        </script>
+  </body>
+</html>

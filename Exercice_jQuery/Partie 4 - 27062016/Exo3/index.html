@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<script src="bower_components/jquery/dist/jquery.js" charset="utf-8"></script>
+<body>
+  <form>
+    <input id="nom" type="texte" placeholder="NOM"/>
+    <input id="prenom" type="texte" placeholder="PRENOM"/>
+    <input id="mail" type="texte" placeholder="Mail"/>
+    <input id="phone" type="texte" placeholder="Téléphone"/>
+    <input id="boutton" type="button" value="Valider"/>
+  </form>
+  <script>
+  $(document).ready(function(){
+    var nom = $('#nom').val();
+    var prenom = $('#prenom').val();
+    var phone = $("#phone").val();
+    var mail = $("#mail").val();
+      // VERIFICATION MAIL
+    /* function MonEmailestUnEmail(mail) {
+      var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+      var fruit = pattern.test(mail);
+      return fruit;
+} */
+
+      // VERIFICATION NUMERO DE TELEPHONE
+      $("#phone").keypress(function (e) {
+        if (e.which != 8 && (e.which < 48 || e.which > 57)) {
+          return false;
+        }
+      });
+      // VERIFICATION DU NOM
+      $("#nom").keypress(function (d) {
+        if (d.which != 8 && d.which != 45 && (d.which < 65 || d.which > 90) && (d.which < 97 || d.which > 122)) {
+          return false;
+        }
+      });
+      // VERIFICATION DU PRENOM
+      $("#prenom").keypress(function (c) {
+        if (c.which != 8 && c.which != 45 && (c.which < 65 || c.which > 90) && (c.which < 97 || c.which > 122)) {
+          return false;
+        }
+      });
+    });
+    </script>
+  </body>
+  </html>

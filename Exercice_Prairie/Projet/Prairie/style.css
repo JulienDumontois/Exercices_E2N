@@ -1,0 +1,497 @@
+body{
+    font-family:arial;
+}
+h1,h2{
+    color: #282C34;
+    font-family: 'Inconsolata', serif;
+}
+
+.presse_titre1{
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+}
+
+#presse_titre1bis{
+    font-size: 15px;
+}
+.presse_titre2{
+    margin-left: 31px;
+    margin-right: 50px;
+}
+
+.presse_stylearticle {
+    float: left;
+    background-color: #DCD6D6;
+    height:inherit;
+    width: 950px;
+    background-color: #DCD6D6;
+    height: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.presse_img_article{
+    float: left;
+    margin: 20px;
+    width: 200px;
+}
+
+
+.presse_text_presse{
+    float: left;
+    margin: 20px;
+    width: 650px;
+    text-align: justify;
+}
+
+.presse_titre_article{
+    float: left;
+    font-family: 'Inconsolata', serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #ED5820;
+    width: 500px;
+}
+.presse_style_titre{
+    text-decoration: none;
+    font-family: 'Inconsolata', serif;
+    color: #ED5820;
+}
+.presse_style_titre:hover{
+    color: orange;
+}
+
+.presse_fonts{
+    margin-left: 3px;
+    font-size: 15px !important;
+}
+.press_stop_float{
+    clear: both;
+}
+.FAQ_h2{
+    font-size: 20px !important;
+    font-weight: bold;
+    font-family: 'Inconsolata', serif;
+}
+.FAQ_p{
+    font-size: 20px;
+    text-align: center;
+}
+.FAQ_h1{
+    text-align: center;
+}
+/* ----- CSS Index ------*/
+.home_700 {
+    margin: 0px;
+    padding: 0px;
+    width: 890px;
+    margin-bottom: 20px;
+}
+
+/* ----- H1 -------------*/
+.h2_FAQ{
+    font-size: 20px !important;
+    font-weight: bold;
+}
+
+#home_title {
+    margin-bottom: -2px;
+    padding: 0px;
+}
+
+#home_title h1 {
+    padding-left: 10px;
+    font-size: 25px;
+    font-weight: inherit;
+}
+
+.icoBillet {
+    font-size: 16px !important;
+    margin-right: 10px;
+    color: #E84E1A;
+}
+
+/* ----- H2 -------------*/
+
+.home_billet h2 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 25px;
+    font-weight: inherit;
+}
+
+/* ----- H3 -------------*/
+
+.home_h3 {
+    padding-left: 24px;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.icoDate {
+    font-size: 14px !important;
+    margin-right: 4px;
+    color: #B3B3B3;
+}
+
+.home_h3 h3 {
+    font-weight: inherit;
+    color: #B3B3B3;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* ----- Paragraphe -------------*/
+
+.home_pave {
+    margin-top: 8px;
+    padding: 0px;
+    border-top: solid 2px #ECEFF0;
+    background-image: linear-gradient(-35deg, transparent, #F8F8F9);
+    background-size: auto;
+    background-position: left top;
+}
+
+#home_stop_float {
+  clear: both;
+}
+
+/* ----- Chapot -------------*/
+
+
+/*------Header------*/
+
+.header_bloc{
+    width: 100%;
+}
+.header{
+    display: inline-flex;
+    list-style: none;
+    width: 900px;
+}
+.header a {
+    text-decoration: none;
+    font-size: 22px;
+    color: #282c34;
+    padding-right: 12px;
+    line-height: 30px;
+}
+
+.header a:hover {
+    text-decoration: none;
+    border-bottom: solid 3px #E84E1A;
+    padding-right: 12px;
+    line-height: 30px;
+}
+
+.header a:active {
+    text-decoration: none;
+    border-bottom: solid 3px #E84E1A;
+    padding-right: 12px;
+    line-height: 30px;
+}
+
+.header_bouton{
+    text-align: left;
+    margin-right: 70px;
+    padding-right: 12px;
+    line-height: 30px;
+}
+
+
+/* ----- fin header ------*/
+
+.footer2{
+    width: 100%;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#282C34;
+    width: 100%;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#282C34;
+}
+
+.icont{
+    margin-left: 5px;
+    font-size: 22px;
+    color: white;
+    margin-top: 0.5px;
+    vertical-align: middle;
+}
+
+#icone{
+    width: 170  px;
+    height: 25px;
+    background-color:#2B7BB9;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin: none !important;
+    padding: 5px;
+
+    width: 149px;
+    height: 25px;
+    background-color:#2B7BB9;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px;
+}
+.footer2 .par{
+    text-align: right;
+    margin-top: 0px; padding-right: 60px; padding-top: 45px;
+    margin-bottom: 0px;
+}
+span{
+    filter:alpha(opacity=90);
+    -moz-opacity: 0.90;
+    opacity:0.90;
+    border-radius :50%;
+}
+.button:hover{
+    filter:alpha(opacity=110);
+    -moz-opacity: 1.1;
+    opacity:1.1;
+}
+.texte{
+    margin-left: 4px;
+    color: white;
+    text-decoration: none;
+    margin: none !important;
+    margin-left: 4px;
+    color: white;
+    text-decoration: none;
+}
+.copyright{
+  text-align: left;
+  margin-top: 34px;
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+  font-family: "Open Sans MS";
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 50;
+}
+.home_pave p {
+    margin: 0px;
+    padding: 8px 10px 12px 10px;
+    text-align: justify;
+}
+
+/* ----- Chapot -------------*/
+
+.home_chapo {
+    margin: 0px;
+    padding: 0px;
+    border-top: solid 2px #ECEFF0;
+    background-image: linear-gradient(-35deg, transparent, #F8F8F9);
+    background-size: auto;
+    background-position: left top;
+}
+
+.home_chapo p {
+    margin: 0px;
+    padding: 8px 10px 12px 10px;
+}
+
+/* ----- Modules -------------*/
+
+
+
+
+/* ----- Fin index -------------*/
+
+/* Page contact */
+.contenu_contacts h1 {
+   margin-bottom: 50px;
+   text-align: center;
+}
+
+#contact_formulaire {
+   width: 42%;
+   float: left;
+   margin-left: 18px;
+}
+
+.contact_form_input {
+   margin: 0px 0px 8px 0px;
+}
+
+.contact_input_champ {
+   width: 308px;
+   margin-bottom: 5px;
+}
+
+#contact_coordonees {
+   width: 50%;
+   float: right;
+   margin-right: 25px;
+}
+
+#contact_coordonees p{
+   text-align: justify;
+   margin-top: 0px;
+}
+
+.contact_iframe {
+   float: right;
+}
+
+.contacts {
+   color: orange;
+}
+
+.contactast{
+ color: orange;
+}
+
+#contact_button {
+   height: 50px;
+   width: 120px;
+   border-color: #6495ed   ;
+   background-color: #E84E1A   ;
+   border-style: 5px dashed black;
+   border-radius: 5px;
+   margin: auto;
+   text-align : center;
+   text-decoration: none;
+   color: white;
+   padding: 5px;
+}
+
+#contact_button:hover{
+ background-color: orange;
+}
+/*-----FIN PAGE CONTACTS-----*/
+/* ----- modules -------------*/
+.modules {
+    width: 260px;
+    margin-right: 10px;
+    float: left;
+}
+.home_bloc_1 {
+    width: 260px;
+    border: solid 1px #EAEAEA;
+    margin: 0px;
+    padding: 0px;
+}
+.home_twitter {
+    color: #54bdff;
+}
+.home_bloc_1_titre {
+    background-color: #282C34;
+    border-bottom: solid 7px #EAEAEA;
+    height: 40px;
+    color: white;
+}
+.marge_center {
+    margin-top: 0px;
+    text-align: center;
+    font-family: Inconsolata;
+    font-size: 20px;
+    line-height: 40px;
+}
+.home_bloc_2 {
+    width: 260px;
+    height: 267px;
+    border: solid 1px #EAEAEA;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 20px;
+}
+.home_Partenaires {
+    color: #ce4a1e;
+}
+.home_bloc_2_titre {
+    background-color: #282C34;
+    border-bottom: solid 7px #EAEAEA;
+    height: 40px;
+    color: white;
+}
+.marge_center_2 {
+    margin-top: 0px;
+    text-align: center;
+    font-family: Inconsolata;
+    font-size: 20px;
+    line-height: 40px;
+}
+/* ----- fin index -------------*/
+
+
+
+.apprenant{
+ float:left;
+ margin-left:70px;
+ text-align:center;
+ }
+
+ .para_apprenant{
+ margin-top : -2px;
+ }
+
+ .italic_apprenant{
+   font-style : italic;
+   color : #848484;
+   font-size: 90%;
+ }
+
+
+ .apprenant_titre{
+   text-align:center;
+ }
+
+.appr_center{
+  text-align: center;
+}
+
+
+.italic_apprenant{
+  font-style : italic;
+}
+
+.apprenant_bloc{
+    clear : both;
+}
+.apprenant_bloc a{
+    float : left;
+    width:20%;
+    color:gray;
+}
+.apprenant_bloc p{    
+    float : left;
+    width:80%;
+}
+
+#apprenant_photo{
+    height:  1000px;
+}
+
+.center_paragraphe{
+    text-align : center;
+}
+
+#iconegit{
+  font-size : 25px;
+  top : 20px;
+  color : #848484;
+}
+
+.contenu{
+  margin-left: 10px;
+  margin-right: 10px;
+  width:980px;
+  float: left;
+}
+.text_center img{
+    margin-left:200px;
+}

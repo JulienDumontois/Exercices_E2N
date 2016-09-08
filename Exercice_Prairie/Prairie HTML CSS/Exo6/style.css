@@ -1,0 +1,50 @@
+div {
+  float: left;
+}
+#c1 {
+  height: 30px;
+	width: 80%;
+	background-color: #2ecc71;
+}
+
+#c2 {
+  height:30px;
+  width:20%;
+  background-color: #2980b9;
+}
+
+#c3{
+  height: 80px;
+  width: 30%;
+  background-color: #e74c3c;
+}
+
+#c4 { height: 40px;
+      width: 35%;
+      background-color: #e67e22;
+}
+
+#c5 { height: 40px;
+      width: 35%;
+      background-color: red;
+}
+
+#c6 { height: 40px;
+      width: 25%;
+      color: blue;
+}
+
+#c7 { height: 40px;
+      width: 25%;
+      background-color: green;
+    }
+
+#c8 { height: 40px
+      width: 20%;
+      background-color: black;
+    }
+
+#c9 { height: 80px;
+      width: 100%;
+      background-color: grey;
+    }

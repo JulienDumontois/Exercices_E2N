@@ -1,0 +1,178 @@
+PARTIE 1 :
+Exercice 2 : CREATE TABLE competences (
+              -> id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+              -> langage VARCHAR(40),
+              -> PRIMARY KEY (id)
+              -> )
+              -> ENGINE = INNODB;
+
+Exercice 3 : CREATE DATABASE colysee CHARACTER SET 'utf8';
+
+Exercice 4 : CREATE TABLE clients (
+              id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+              nom VARCHAR(40) ,
+              prenom VARCHAR(40),
+              carteFidelite BIGINT UNSIGNED NOT NULL,
+              reduction INT UNSIGNED,
+              PRIMARY KEY(id)
+              )
+              ENGINE=INNODB;
+
+Exercice 5 : CREATE TABLE salles (
+              -> id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+              -> nombreSiege MEDIUMINT UNSIGNED NOT NULL,
+              -> PRIMARY KEY(id)
+              -> )
+              -> ENGINE=INNODB;
+
+Exercice 6 : CREATE TABLE spectacles (
+              id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+              intitule VARCHAR(100),
+              artiste VARCHAR(100),
+              type VARCHAR(50),
+              genre VARCHAR(50),
+              date DATE NOT NULL,
+              heure TIME NOT NULL,
+              duree TIME NOT NULL,
+              salles_id SMALLINT UNSIGNED NOT NULL,
+              PRIMARY KEY(ID)
+              )
+              ENGINE=INNODB;
+
+Exercice 7 : CREATE TABLE reservations (
+              id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+              spectaclesId SMALLINT UNSIGNED NOT NULL,
+              clientsId SMALLINT UNSIGNED NOT NULL,
+              nombreBillets SMALLINT UNSIGNED NOT NULL,
+              PRIMARY KEY(id)
+              )
+              ENGINE=INNODB;
+
+
+PARTIE 2 :
+Exercice 1 : > INSERT INTO clients
+              -> VALUES(1, 'Masson', 'Juliette', 'Oui', '0.5');
+
+Exercice 2 : INSERT INTO spectacles
+              -> VALUES(2,'Kean','Cie "Les scènes de l''Oise"','Théâtre','Drame','2017-02-25','20:30:00','02:00:00','4');
+
+Exercice 3 : mysql> INSERT INTO salles
+            -> VALUES(2,50);
+            Query OK, 1 row affected (0,05 sec)
+
+            mysql> INSERT INTO salles
+            -> VALUES (3,55);
+            Query OK, 1 row affected (0,03 sec)
+
+            mysql> INSERT INTO salles
+            -> VALUES(4,60);
+            Query OK, 1 row affected (0,04 sec)
+
+            mysql> INSERT INTO salles
+            -> VALUES(5,65);
+            Query OK, 1 row affected (0,04 sec)
+
+            mysql> INSERT INTO salles
+            -> VALUES (1,45);
+            Query OK, 1 row affected (0,04 sec)
+
+Exercice 4 : USE colysee
+              LOAD DATA LOCAL INFILE '/home/dumontois/Téléchargements/Exercices-SQL-partie-2-master/csv/clients.csv'
+              INTO TABLE clients
+              FIELDS TERMINATED BY ';'
+              LINES TERMINATED BY '\n'
+              IGNORE 1 LINES
+              (id,nom,prenom,carteFidelite,reduction);
+
+Exercice 5 : LOAD DATA LOCAL INFILE '/home/dumontois/Téléchargements/Exercices-SQL-partie-2-master/csv/spectacles.csv'
+              INTO TABLE spectacles
+              FIELDS TERMINATED BY ';'
+              LINES TERMINATED BY '\n'
+              IGNORE 1 LINES
+              (id,intitule,artiste,type,genre,date,heure,duree,salles_id);
+
+Exercice 6 : SOURCE /home/dumontois/Téléchargements/Exercices-SQL-partie-2-master/sql/reservations.sql;
+Exercice 7 : SOURCE /home/dumontois/Téléchargements/Exercices-SQL-partie-2-master/sql/billets.sql;
+
+PARTIE 3 :
+Exercice 1 : Afficher tous les clients de la table clients
+Exercice 1 : SELECT * FROM clients
+
+Exercice 2 : Afficher tous les clients qui ont une carte de fidélité de la table clients.
+Exercice 2 : SELECT * FROM clients WHERE carteFidelite="1";
+
+Exercice 3 : Afficher les billets à tarif réduit (Enfants et Étudiants) dans la table billets.
+Exercice 3 : SELECT * FROM billets WHERE type='Etudiants' || type='Enfants';
+
+Exercice 4 : Afficher tous les billets de la réservation n°1 dans la table billets.
+Exercice 4 : SELECT * FROM billets WHERE reservations_id='1';
+
+Exercice 5 : Afficher tous les concerts de variété pop internationale dans la table spectacles.
+Exercice 5 : SELECT * FROM spectacles WHERE genre = 'Variété pop internationale';
+
+Exercice 7 : Dans la table billets, sélectioner tous les billets au tarif étudiant qui appartiennent à la réservation n°1.
+Exercice 7 : SELECT * FROM billets WHERE reservations_id='1' && type='Etudiants';
+
+Exercice 8 : Dans la table spectacles, afficher les One Man Show et les pièces de théâtre.
+Exercice 8 : SELECT * FROM spectacles WHERE type='Théâtre' || type='One Man Show';
+
+Exercice 9 : Dans la table billets, afficher tous les prix possibles (enfants, étudiants, ...). Chaque résultat ne doit apparaître qu'une seule fois !
+Exercice 9 : SELECT DISTINCT prix FROM billets ORDER BY prix ASC;
+
+Exercice 10 : Dans la table clients, afficher tous les clients et les trier par nom.
+Exercice 10 : SELECT * FROM clients ORDER BY nom ASC;
+
+Exercice 11 : Dans la table clients, ne'afficher que les 5 premiers clients.
+Exercice 11 : SELECT * FROM clients LIMIT 5;
+
+Exercice 12 : Dans la table spectacles, afficher tous les genres. Chaque genre ne doit apparaître qu'une seule fois.
+Exercice 12 : SELECT DISTINCT genre FROM spectacles ORDER BY name;
+
+Exercice 13 : Dans la table spectacles, afficher tous les intitulés et les trier par nom.
+Exercice 13 : SELECT intitule FROM `spectacles` ORDER BY intitule ASC;
+
+Partie 4 :
+Exercice 1 : Afficher tous les clients dont le nom commence par la lettre "L".
+Exercice 1 : SELECT * FROM clients WHERE nom LIKE 'L%';
+
+Exercice 2 : Afficher tous les clients dont le nom commence par "L" et qui ne contiennent que 5 lettres.
+Exercice 2 : SELECT * FROM clients WHERE nom LIKE 'L____';
+
+Exercice 3 : Afficher tous les clients dont le nom commence par "P" et finit par "ski".
+Exercice 3 : SELECT * FROM clients WHERE nom LIKE 'P%ski';
+
+Exercice 4 : Afficher tous les clients dont le nom commence par "A", finit par "da" et ne contient que 8 lettres.
+Exercice 4 : SELECT * FROM clients WHERE nom LIKE 'A_____da';
+
+Exercice 5 : Afficher le nom de tous les clients dont le nom ne contient pas la lettre "a".
+Exercice 5 : SELECT * FROM clients WHERE nom NOT LIKE '%a%';
+
+Exercice 6 : Afficher tous les prix de billets commençant par le chiffre 2.
+Exercice 6 : SELECT * FROM billets WHERE prix LIKE '2%';
+
+Bonus : Afficher tous les clients dont le nom contient "L". Attention : les clients dont le nom contient "l" ne doivent pas apparaître.
+Bonus : SELECT * FROM clients WHERE nom LIKE BINARY '%L%';
+
+Exercice 7 : Afficher tous les spectacles ayant lieu entre le 15 mai 2016 et le 15 aôut 2016.
+Exercice 7 : SELECT * FROM spectacles WHERE date BETWEEN '2016-05-16' AND '2016-08-15';
+
+Exercice 8 : Afficher tous les prix de billets compris entre 5 € et 20 €.
+Exercice 8 : SELECT * FROM billets WHERE prix BETWEEN 5 AND 20;
+
+Bonus : En utilisant la même requête que pour les execcices 7 et 8, afficher tous les clients dont le nom commence par "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K" ou "L". Les trier par nom.
+Bonus : SELECT * FROM clients WHERE nom BETWEEN 'A%' AND 'M%' ORDER BY nom ASC;
+
+Exercice 9 : Afficher tous les spectacles qui ne se déroulent pas entre le 1er janvier 2016 et le 15 février 2016.
+Exercice 9 : SELECT * FROM spectacles WHERE date NOT BETWEEN '2016-01-16' AND '2016-02-15';
+
+Exercice 10 : En utilisant le même requête que pour l'exercice 9, afficher toutes les réservations qui concernent moins de 2 billets et plus de 6 billets.
+Exercice 10 : SELECT * FROM reservations WHERE nombreBillets NOT BETWEEN 2 AND 6;
+
+Exercice 11 : Afficher tous les clients dont le nom se trouve dans cette liste :
+              Faubert, Dubeau, Soucy, Michaud, Rivière, Lacroix, Demers, Tritan.
+              Les trier par nom.
+Exercice 11 : SELECT * FROM clients WHERE nom='Faubert' OR nom='Dubeau' OR nom='Soucy' OR nom='Michaud' OR nom='Rivière' OR nom='Lacroix' OR nom='Demers' OR nom='Tritan' ORDER BY nom ASC;
+
+Exercice 12 : Afficher tous les clients dont le nom n'est pas dans cette liste.
+              Les trier par nom;
+Exercice 12 : SELECT * FROM clients WHERE nom NOT IN('Demers','Dubeau','Faubert','Lacroix','Michaud','Rivière','Soucy','Tritant') ORDER BY nom ASC;

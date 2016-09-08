@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 6</title>
+  </head>
+  <body>
+      <img src="image1.jpg" id="image1" onmouseover="ab(id)" onmouseout="ef(id)"/>
+      <img src="image2.jpg" id="image2" onmouseover="ab(id)" onmouseout="ef(id)"/>
+      <img src="image3.jpg" id="image3" onmouseover="ab(id)" onmouseout="ef(id)"/>
+      <img src="image4.jpg" id="image4" onmouseover="ab(id)" onmouseout="ef(id)"/>
+      <img src="image5.jpg" id="image5" onmouseover="ab(id)" onmouseout="ef(id)"/>
+  </body>
+  <script>
+  function ab(cd) {
+    document.getElementById(cd).src = cd + "_2.jpg";
+}
+  function ef(gh) {
+    document.getElementById(gh).src = gh + ".jpg";
+}
+  </script>
+</html>

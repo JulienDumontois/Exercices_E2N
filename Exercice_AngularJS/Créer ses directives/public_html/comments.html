@@ -1,0 +1,64 @@
+<ul class="breadcrumb">
+    <li><a href="#/">Retour</a></li>
+    <li class="active">{{comment.username}}</li>
+</ul>
+
+<div ng-hide="loading">
+    <ng-tabs>
+        <ng-tab title="Article">
+            <h1>{{title}}</h1>
+        </ng-tab>
+     
+        <ng-tab title="{{comments.length}} Commentaires">
+            <h3>{{comments.length}} Commentaires</h3>
+            <div ng-repeat="comment in comments| filter:{content:query} | orderBy:order">
+                <p>
+                    <strong>{{comment.username}}</strong><br/>
+                    {{comment.content}}
+                </p>
+            </div>
+        </ng-tab>
+    </ng-tabs>
+    <div class="form-group"><input class="form-control datepicker" datepicker-options="{today: 'Aujourdhui'}" type="text" placeholder="Choisissez une date" ng-model="newComment.username"/></div>
+    <time></time>
+    <form ng-submit="addComment()">
+        <h3>Ajouter un commentaire</h3>
+        <div class="form-group"><input class="form-control" type="text" placeholder="username" ng-model="newComment.username"/></div>
+        <div class="form-group"><input class="form-control" type="text" placeholder="city" ng-model="newComment.city"/></div>
+        <div class="form-group"><input class="form-control" type="text" placeholder="email" ng-model="newComment.email"/></div>
+        <textarea ng-model="newComment.content"></textarea>
+        <input type="submit" value="Envoyer"/>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<a href="#/">Revenir en arrière d'où on est venu avant</a>
+<div ng-show="loading">Chargement....</div>
+<div ng-hide="loading">
+    <h1>{{title}}</h1>
+
+    <div ng-repeat="comment in comments| filter:{content:query} | orderBy:order">
+        <p>
+            <strong>{{comment.username}}</strong><br/>
+            {{comment.content}}
+        </p>
+    </div>
+    <form ng-submit="addComment()">
+        <input type="text" placeholder="username" ng-model="newComment.username"/><br/>
+        <input type="text" placeholder="city" ng-model="newComment.city"/><br/>
+        <input type="text" placeholder="email" ng-model="newComment.email"/><br/>
+        <textarea ng-model="newComment.content"></textarea>
+        <input type="submit" value="Envoyer"/>
+    </form>
+</div>-->

@@ -1,0 +1,12 @@
+body {
+    background-color: #DDD;
+    padding-top: 70px;
+}
+.well {
+    background-color: #CCC;
+    padding: 20px;
+}
+.btn-group {
+    padding: 10px;
+}
+

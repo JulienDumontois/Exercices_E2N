@@ -1,0 +1,59 @@
+form {
+  font-family: Arial;
+  background-color: #F48787;
+  border-radius: 15px;
+  border: 1px #F90303 solid;
+  padding: 0.5em; }
+
+.invalid {
+  border-color: #F00;
+  background-color: #FCC; }
+
+p {
+  color: #F00;
+  margin: 0;
+  margin-bottom: 0.5em; }
+
+.message {
+  margin-top: 0.5em;
+  border: 1px white solid; }
+
+.subject {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  padding: 0.5em;
+  border-radius: 15px; }
+
+.content {
+  padding: 0.5em;
+  border-top: 1px white solid;
+  background-color: #B6B6B8;
+  border-radius: 15px; }
+
+input {
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0.5em;
+  border: 1px #F90303 solid;
+  margin-bottom: 0.5em; }
+
+button {
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0.5em; }
+
+textarea {
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0.5em;
+  border: 1px #F90303 solid;
+  margin-bottom: 0.5em; }
+
+/*# sourceMappingURL=style.css.map */

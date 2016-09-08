@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <form>
+    <label for="age">Votre âge : </label><input type="text" id="age" name="age"/><br/>
+    <button id="valider" name="valider" onclick="shox()">Valider</button>
+  </form>
+  <script>
+  function shox(){
+         var age= document.getElementById('age').value;
+         if(isNaN(age)) {
+           alert('erreur');
+         }
+         else {
+           age = parseFloat(age);
+           if(age < 18){
+             alert('Vous êtes mineur');
+           }
+           else {
+             alert('Vous êtes majeur');
+           }
+         }
+       }
+      </script>
+    </body>
+    </html>

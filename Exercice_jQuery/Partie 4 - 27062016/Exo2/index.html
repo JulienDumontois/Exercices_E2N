@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="bower_components/jquery/dist/jquery.js" charset="utf-8"></script>
+</head>
+<body>
+  <form>
+    <input id="salaire" type="text" placeholder="salaire"/>
+    <input id="sexe" type="text" placeholder="sexe"/>
+    <input id="enfants" type="text" placeholder="nombre d'enfants"/>
+    <input id="valider" type="button" name="valider" value="Valider"/>
+  </form>
+  <script>
+  $(document).ready(function(){
+    $('#valider').click(function(){
+      // RECUPERATION DES VALEURS
+      var salaire = $('#salaire').val();
+      var sexe = $('#sexe').val();
+      var enfants = $('#enfants').val();
+      // SOUSTRACTION DES CHARGES
+      var salairenet = ((salaire*18)/100);
+      var assurance = ((salaire*7)/100);
+      var cotisations = ((salaire*5)/100);
+      // SALAIRE NET TOUTES CHARGES DEDUITES
+      var tout = salaire - (salairenet + assurance + cotisations);
+      // CAS 1 : UNE FEMME AVEC 4 ENFANTS OU PLUS
+      if (sexe =='F' && enfants>3){
+        var reduc4 = tout*1.04
+        alert(reduc4+'€');
+      }
+      //CAS 2 : UNE FEMME AVEC 3 ENFANTS
+      else if (sexe=='F' && enfants==3){
+        var reduc3 = tout*1.03
+        alert(reduc3+'€');
+      }
+      // CAS 3 : HOMME AVEC 4 ENFANTS OU FEMME 
+      else if ((enfants > 3) || (sexe == 'F')){
+        var reduc2 = tout*1.02
+        alert (reduc2+'€');
+      }
+      // CAS 4 : HOMME AVEC 3 ENFANTS
+      else if (enfants == 3){
+        var reduc1 = tout * 1.01
+        alert (reduc1+'€');
+      }
+
+      else {
+        alert(tout+'€');
+      }
+    });
+  });
+  </script>
+</body>
+</html>

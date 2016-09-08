@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mon projet canvas</title>
+        <script src="canvas.js"></script>
+        <meta charset="UTF-8">
+        <meta name="name" content="content">
+    </head>
+    <body>
+
+        <canvas id="mon_canvas" width="1000" height="1000">
+            Message pour les navigateurs ne supportant pas encore canvas.
+        </canvas>
+
+        <script type="text/javascript">
+        window.onload = function()
+        {
+            var canvas = document.getElementById("mon_canvas");
+            if(!canvas)
+            {
+                alert("Impossible de récupérer le canvas");
+                return;
+          }
+            var context = canvas.getContext("2d");
+            if(!context)
+            {
+                alert("Impossible de récupérer le context");
+                return;
+            }
+
+            context.beginPath();//On démarre un nouveau tracé
+            context.moveTo(0, 200);//On se déplace au coin inférieur gauche
+            context.lineTo(50, 50);
+            context.lineTo(100, 50);
+            context.lineTo(50, 100);
+            context.lineTo(0, 300);
+            context.stroke();//On trace seulement les lignes.
+            context.closePath();

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="jquery-2.2.4.js"></script>
+</head>
+<body>
+  <form>
+    <input id="jaitrouverapresjuju" type="texte"/>
+    <input id="deuxfois" type="button" value="+1"/>
+  </form>
+</body>
+<script>
+$(document).ready(function(){
+  $('#deuxfois').click(function(){
+    var nombreclick = $('#jaitrouverapresjuju').val();
+    nombreclick++;
+    $('#jaitrouverapresjuju').val(nombreclick);
+  });
+});
+
+/* var nombreclick = 0
+function modifier() {
+  document.getElementById('jaitrouveravantjuju').value = nombreclick;
+  nombreclick++;
+} */
+</script>
+</html>

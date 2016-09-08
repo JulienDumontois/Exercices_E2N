@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../plugin/themes/classic.date.css" rel="stylesheet" type="text/css"/>
+        <link href="../plugin/themes/classic.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="http://bootswatch.com/flatly.boostrap.min.css"/>
+        <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
+        <script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+        <script src="https://code.angularjs.org/1.5.7/angular-route.min.js"></script>
+        <script src="js/app.js" type="text/javascript"></script>
+        <script src="js/controller/comment.js" type="text/javascript"></script>
+        <script src="js/service/post.js" type="text/javascript"></script>
+        <script src="js/controller/posts.js" type="text/javascript"></script>      
+        <script src="js/controller/comments.js" type="text/javascript"></script>
+        <script src="../plugin/compressed/picker.js" type="text/javascript"></script>
+        <script src="../plugin/compressed/picker.date.js" type="text/javascript"></script>
+
+    </head>
+    <body ng-app="MonApp">
+        <!-- TUTO 1 : LES DIRECTIVES & TUTO 2 : CONTROLLER & SCOPE-->
+        <div ng-show="loading">Chargement...</div>
+        <div class="navbar navbar-default">
+            <div class="navbar-header">
+                <a class="navbar-brand">Angular JS</a>
+            </div>
+
+        </div>
+        <div ng-view></div>
+
+    </body>
+</html>

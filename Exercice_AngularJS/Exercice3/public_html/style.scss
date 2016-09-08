@@ -1,0 +1,57 @@
+$padd: 0.5em;
+$radius: 15px;
+form {
+    font-family: Arial;
+    background-color: #F48787;
+    border-radius: $radius;
+    border: 1px #F90303 solid;
+    padding: $padd;
+}
+.invalid {
+    border-color: #F00;
+    background-color: #FCC;
+}
+p {
+    color: #F00;
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+.message {
+    margin-top: 0.5em;
+    border: 1px white solid;
+}
+.subject {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    padding: $padd;
+    border-radius: $radius;
+}
+.content {
+    padding: $padd;
+    border-top: 1px white solid;
+    background-color: #B6B6B8;
+    border-radius: $radius;
+}
+@mixin ibt(){
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: $padd;
+}
+@mixin it(){
+    border: 1px #F90303 solid;
+    margin-bottom: 0.5em;
+}
+input{
+    @include ibt();
+    @include it();
+}
+button{
+    @include ibt();
+}
+textarea{
+    @include ibt();
+    @include it();
+}

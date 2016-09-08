@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulaire</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
+        <script src="script.js" type="text/javascript"></script>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div ng-app="app">
+            <div ng-controller="appCtrl">
+                <form name="messageForm" ng-submit="addMessage(message)" novalidate>
+                    <label>
+                        <input placeholder="Nom" ng-model="message.name" name="messageName" ng-minlength="3" ng-required="true" ng-pattern="rgxName"/>
+                        <p ng-show="messageForm.messageName.$invalid && messageForm.messageName.$dirty">Veuillez renseigner votre nom</p>
+                    </label>
+                    <label>
+                        <input placeholder="E-mail" ng-model="message.email" name="messageEmail" ng-required="true" ng-pattern="/@/"/>
+                        <p ng-show="messageForm.messageEmail.$invalid && messageForm.messageEmail.$dirty">Veuillez saisir votre e-mail</p>
+                    </label>
+                    <label>
+                        <input placeholder="Numero" ng-model="message.number" name="messageNumber" ng-required="true" ng-pattern="rgxPhone"/>
+                        <p ng-show="messageForm.messageNumber.$invalid && messageForm.messageNumber.$dirty">Veuillez saisir votre numéro</p>
+                    </label>
+                    <label>
+                        <input placeholder="Sujet" ng-model="message.subject" name="messageSubject" ng-required="true" ng-minlength="5"/>
+                        <p ng-show="messageForm.messageSubject.$invalid && messageForm.messageSubject.$dirty">Veuillez saisir le sujet</p>
+                    </label>
+                    <label>
+                        <textarea placeholder="Message" ng-model="message.content" name="messageContent" ng-required="true" ng-minlength="10"></textarea>
+                        <p ng-show="messageForm.messageContent.$invalid && messageForm.messageContent.$dirty">Veuillez saisir un content d'au moins 10 caractères</p>
+                    </label>
+                    <button type="submit" ng-disabled="messageForm.$invalid">Envoyer</button>
+                </form>
+                <div class="message" ng-repeat="message in messages">
+                    <div class="subject" ng-click="message.show = !message.show"><strong>{{message.subject}}</strong></div>
+                    <div class="content" ng-show="message.show"><u>Name</u> : {{message.name}}</div>
+                    <div class="content" ng-show="message.show"><u>Mail</u> : {{message.email}}</div>
+                    <div class="content" ng-show="message.show"><u>Phone</u> : {{message.number}}</div>
+                    <div class="content" ng-show="message.show"><u>Content</u> : {{message.content}}</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

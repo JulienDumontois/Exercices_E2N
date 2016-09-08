@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercice_7</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <form>
+    <label for="pointure">Pointure : </label><input type="text" id="pointure" name="pointure"/><br/>
+    <label for="annee">Année de naissance : </label><input type="text" id="annee" name="annee"/><br/>
+    <button id="valider" name="valider" onclick="OMG()">Valider</button>
+  </form>
+  <script>
+  function test(){
+    var taille = document.getElementById('pointure').value;
+    var born = document.getElementById('annee').value;
+    if(isNaN(taille) || isNaN(born)) {
+      return "Error";
+    }
+    else{
+      taille = parseFloat(taille);
+      born = parseFloat(born);
+      var resultat = taille * 2;
+      resultat = resultat + 5;
+      resultat = resultat * 50;
+      resultat = resultat - born;
+      resultat = resultat + 1766;
+      return resultat;
+    }
+  }
+  function OMG(){
+    alert(test());
+  }
+  </script>
+</body>
+</html>

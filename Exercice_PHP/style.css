@@ -1,0 +1,28 @@
+h1 {
+  color: #7E062A;
+  text-align: center;
+  text-decoration: underline;
+}
+h2 {
+  color: #028889;
+  text-align: center;
+  text-decoration: underline;
+}
+a {
+  width: 250px;
+}
+.padd {
+  padding: 10px;
+}
+.btn-travaux {
+  color: white;
+  background-color: black;
+  border: black;
+  width : 750px;
+}
+.nulencss {
+  text-align: center;
+}
+.boo {
+  text-align: center;
+}

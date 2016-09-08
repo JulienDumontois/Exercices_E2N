@@ -1,0 +1,24 @@
+.lab {
+    width: 200px;
+    text-align: center;
+    text-decoration: underline;
+    margin-left: auto;
+}
+.send {
+    width: 200px;
+    margin-left: auto;
+}
+p {
+    text-align: center;
+}
+input {
+    display: block;
+    width: 200px;
+    margin-left: auto;
+}
+.cadre {
+    width: 400px;
+    height: 500px;
+    background-color: #FCD6AF;
+    border-radius: 20px;
+}

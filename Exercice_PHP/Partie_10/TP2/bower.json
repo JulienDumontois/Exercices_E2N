@@ -1,0 +1,17 @@
+{
+  "name": "TP2",
+  "homepage": "https://github.com/JulienDumontois/Exo_PHP_P1toP9",
+  "authors": [
+    "Cptain-juju <julien.dumontois@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

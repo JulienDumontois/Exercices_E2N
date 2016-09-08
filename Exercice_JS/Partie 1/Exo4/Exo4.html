@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form>
+            <label for="nom">Nom : </label><input type="text" name="nom" id="nom"/>
+            <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"/>
+            <label for="ville">Ville : </label><input type="text" name="ville" id="ville"/>
+            <button  name="valider" id="valider" onClick="submitForm();">Valider</button>
+    </form>
+    <script>
+      function submitForm () {
+        var nom = document.getElementById("nom").value;
+        var prenom = document.getElementById("prenom").value
+        var ville = document.getElementById("ville").value
+        alert("Vous avez tapé : " + nom + " " + prenom + " " + ville);
+      }
+/*  var Nom = prompt("Entrez votre nom");
+    var Prénom = prompt("Entrez votre prénom");
+    var Ville = prompt("Entrez votre ville");
+    alert("Nom :" + Nom + "\n" + "Prénom :" + Prénom + "\n" + "Ville :" + Ville);
+*/
+/*
+    var nom = "Nom : "
+    var nom1 = prompt ("Saisissez votre nom\n")
+    var prenom = "\nPrénom : "
+    var prenom1 =  prompt("Saisissez votre prénom \n")
+    var ville = "\nVille : "
+    var ville1 = prompt("Saisissez votre ville")
+    alert(nom + nom1 + prenom + prenom1 + ville + ville1)
+*/
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src='bower_components/jquery/dist/jquery.js'></script>
+</head>
+<body>
+  <div id="rectangle" style="width:300px;height:50px;border:1px solid #000;"></div>
+  <br/>
+  <form>
+    <input id="button1" type="button" value="Hauteur"/>
+    <input id="button2" type="button" value="Vert"/>
+    <input id="button3" type="button" value="Init"/>
+    <input id="button4" type="button" value="Disp"/>
+    <input id="button5" type="button" value="Apparait"/>
+  </form>
+</body>
+<script>
+$(document).ready(function(){
+  $('#button1').click(function(){
+    // Récuperer la taille du rectangle
+  var nombre = $('#rectangle').height();
+    // Condition
+  if ( nombre >= 100){
+    nombre=10;
+  }
+ else {
+   nombre +=10;
+}
+$('#rectangle').css('height', + nombre + 'px');
+});
+  // Mettre le rectangle en vert
+  $('#button2').click(function(){
+    $('div').css('border', '1px solid green');
+  });
+  // Revenir au rectangle initial
+  $('#button3').click(function(){
+    $('div').css('border', '1px solid #000')
+  });
+  // Faire disparaitre le rectangle
+  $('#button4').click(function(){
+    $('div').css('display', 'none');
+  });
+  // Faire réapparaître le rectangle
+  $('#button5').click(function(){
+    $('div').show();
+  });
+});
+</script>
+</html>

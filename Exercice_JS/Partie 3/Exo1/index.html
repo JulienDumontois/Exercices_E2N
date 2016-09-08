@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 1</title>
+  </head>
+  <body>
+    <img src="image1.jpg" id="image1" onMouseOver = "changeimage()" onMouseOut = "retourimage()"/>
+    <script>
+  function changeimage(){
+    var photo1 = document.getElementById('image1');
+    photo1.src = ('image1_2.jpg');
+    photo1.style.border = "3px solid red";
+  }
+  function retourimage(){
+    var photo2 = document.getElementById('image1');
+    photo2.src = ('image1.jpg');
+    photo2.style.border = "none";
+  }
+  </script>
+</body>
+</html>
